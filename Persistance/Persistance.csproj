@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <SSDTUnitTestPath Condition="'$(SSDTUnitTestPath)' == ''">$(VsInstallRoot)\Common7\IDE\Extensions\Microsoft\SQLDB</SSDTUnitTestPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SSDTPath Condition="'$(SSDTPath)' == ''">$(VsInstallRoot)\Common7\IDE\Extensions\Microsoft\SQLDB\DAC\130</SSDTPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="Correction.docx" />
+    <None Remove="Scripts\Character.sql" />
+    <None Remove="Scripts\CharacterAlderaan - corrige.sql" />
+    <None Remove="Scripts\CharacterAlderaan.sql" />
+    <None Remove="Scripts\CharactersEpisodeV - corrige.sql" />
+    <None Remove="Scripts\CharactersEpisodeV.sql" />
+    <None Remove="Scripts\HomePlanet - corrige.sql" />
+    <None Remove="Scripts\HomePlanet.sql" />
+    <None Remove="Scripts\NomsPersos - corrige.sql" />
+    <None Remove="Scripts\NomsPersos.sql" />
+    <None Remove="~%24Tuto.docx" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Data.Sqlite" Version="6.0.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.15" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="5.0.15" />
+    <PackageReference Include="SQLite" Version="3.13.0" />
+  </ItemGroup>
+ 
+  <ItemGroup>
+    <Folder Include="Scripts\" />
+  </ItemGroup>
+  
+</Project>
